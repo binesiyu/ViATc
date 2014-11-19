@@ -1,7 +1,7 @@
 ﻿<TConly>:
 ;=======================================================
 	Global TCPath
-	TCPath := "e:\Program Files\totalcmd\TOTALCMD.EXE"
+	TCPath := "E:\soft\Total_Commander_v8.5\TOTALCMD64.EXE"
 	If RegExMatch(TcPath,"i)totalcmd64\.exe$")
 	{
 		Global TCListBox := "LCLListBox"
