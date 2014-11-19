@@ -1,7 +1,7 @@
 ﻿<TConly>:
 ;=======================================================
 	Global TCPath
-	TCPath := "E:\soft\Total_Commander_v8.5\TOTALCMD64.EXE"
+	TCPath := "E:\soft\Total_Commander_v8.5\TOTALCMD.EXE"
 	If RegExMatch(TcPath,"i)totalcmd64\.exe$")
 	{
 		Global TCListBox := "LCLListBox"
@@ -63,12 +63,12 @@
 	RegisterHotkey("i","<Insert_Mode_TC>","TTOTAL_CMD")
 	RegisterHotkey("d","<cm_DirectoryHotlist>","TTOTAL_CMD")
 	RegisterHotkey("D","<cm_OpenDesktop>","TTOTAL_CMD")
-	RegisterHotkey("e","<cm_ContextMenu>","TTOTAL_CMD")
+	RegisterHotkey("M","<cm_ContextMenu>","TTOTAL_CMD")
 	RegisterHotkey("E","<cm_ExeCuteDOS>","TTOTAL_CMD")
 	RegisterHotkey("N","<cm_DirectoryHistory>","TTOTAL_CMD")
 	RegisterHotkey("n","<azHistory>","TTOTAL_CMD")
 	RegisterHotkey("m","<Mark>","TTOTAL_CMD")
-	RegisterHotkey("M","<Half>","TTOTAL_CMD")
+	;RegisterHotkey("M","<Half>","TTOTAL_CMD")
 	RegisterHotkey("'","<ListMark>","TTOTAL_CMD")
 	RegisterHotkey("u","<GoToParentEx>","TTOTAL_CMD")
 	RegisterHotkey("U","<cm_GoToRoot>","TTOTAL_CMD")
@@ -155,6 +155,8 @@
 	RegisterHotkey("zs","<TransParent>","TTOTAL_CMD")
 	RegisterHotkey(".","<Repeat>","TTOTAL_CMD")
 	RegisterHotkey("<lwin>e","<ToggleTC>")
+	RegisterHotkey("<lwin>w","<ToggleVIM>")
+	;RegisterHotkey("<lwin>f","<ToggleFIREFOX>")
 	SetHotkey("esc","<Normal_Mode_TC>","TTOTAL_CMD")
 	;; 默认按键完
 	ReadNewFile()
@@ -189,20 +191,33 @@ return
 return
 ; <ToggleTC> {{{1
 <ToggleTC>:
-	IfWinExist,AHK_CLASS TTOTAL_CMD	
-		WinActivate,AHK_CLASS TTOTAL_CMD
+    togglewindow("TTOTAL_CMD",TCPath)
+return
+
+<ToggleVIM>:
+    togglewindow("Vim","e:\vim\exVim\vim74\gvim.exe")
+return
+
+<ToggleFIREFOX>:
+    togglewindow("MozillaWindowClass","C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
+return
+
+togglewindow(CLASS,PATH)
+{
+	IfWinExist,AHK_CLASS %CLASS%	
+		WinActivate,AHK_CLASS %CLASS%
 	Else
-		Run,%TCPath%
+		Run,%PATH%
 	Loop,4
 	{
-		IfWinNotActive,AHK_CLASS TTOTAL_CMD
-			WinActivate,AHK_CLASS TTOTAL_CMD
+		IfWinNotActive,AHK_CLASS %CLASS%
+			WinActivate,AHK_CLASS %CLASS%
 		Else
 			Break
 		Sleep,500
 	}
 	EmptyMem()
-return
+}
 ; <azHistory> {{{1
 <azHistory>:
 		azhistory()

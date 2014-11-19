@@ -222,7 +222,7 @@ return
 	Gui,Destroy
 	Gui,Font,s9
 	GUi,+Theme
-	Gui,Add,DropDownList,choose1 gchangelist,%m%
+	Gui,Add,DropDownList,choose1 ,%m%
 	Gui,Add,ListView,Grid r20 w700 h400,动作|描述
 	Lv_ModifyCol(1,200)
 	idx := 1

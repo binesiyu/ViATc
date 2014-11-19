@@ -7,8 +7,8 @@
 	CustomActions("<GotoNextDirOther>","前进另一侧")
 	;RegisterHotkey("H","o","<OpenDriveThis>")
 	;RegisterHotkey("H","O","<OpenDriveThat>")
-	RegisterHotkey("fd","<MoveDirectoryHotlist>","TTOTAL_CMD")
-	RegisterHotkey("fb","<CopyDirectoryHotlist>","TTOTAL_CMD")
+	;RegisterHotkey("fd","<MoveDirectoryHotlist>","TTOTAL_CMD")
+	;RegisterHotkey("fb","<CopyDirectoryHotlist>","TTOTAL_CMD")
 	;复制/移动到右侧 f取file的意思 filecopy
 	RegisterHotkey("fc","<cm_CopyOtherpanel>","TTOTAL_CMD")
 	RegisterHotkey("fx","<cm_MoveOnly>","TTOTAL_CMD")
