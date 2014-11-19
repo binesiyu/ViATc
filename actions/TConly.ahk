@@ -2,7 +2,7 @@
 ;=======================================================
 	Global TCPath
 	TCPath := "E:\soft\Total_Commander_v8.5\TOTALCMD64.EXE"
-	If RegExMatch(TcPath,"i)totalcmd64\.exe$")
+	If RegExMatch(TcPath,"i)totalcmd\.exe$")
 	{
 		Global TCListBox := "LCLListBox"
 		Global TCEdit := "Edit2"
@@ -96,7 +96,7 @@
 	RegisterHotkey("|","<cm_ClearAll>","TTOTAL_CMD")
 	RegisterHotkey("-","<cm_SwitchSeparateTree>","TTOTAL_CMD")
 	RegisterHotkey("=","<cm_MatchSrc>","TTOTAL_CMD")
-	RegisterHotkey(":","<cm_FocusCmdLine>","TTOTAL_CMD")
+	RegisterHotkey(";","<cm_FocusCmdLine>","TTOTAL_CMD")
 	RegisterHotkey("G","<LastLine>","TTOTAL_CMD")
 	RegisterHotkey("ga","<cm_CloseAllTabs>","TTOTAL_CMD")
 	RegisterHotkey("gg","<GoToLine>","TTOTAL_CMD")
