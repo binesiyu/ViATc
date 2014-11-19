@@ -2,10 +2,10 @@
 ;=======================================================
 	Global TCPath
 	TCPath := "E:\soft\Total_Commander_v8.5\TOTALCMD64.EXE"
-	If RegExMatch(TcPath,"i)totalcmd\.exe$")
+	If RegExMatch(TcPath,"i)totalcmd64\.exe$")
 	{
 		Global TCListBox := "LCLListBox"
-		Global TCEdit := "Edit2"
+		Global TCEdit := "Edit1"
 		Global TInEdit := "TInEdit1"
 		GLobal TCPanel1 := "Window1"
 		Global TCPanel2 := "Window11"
