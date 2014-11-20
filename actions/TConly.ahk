@@ -156,7 +156,7 @@
 	RegisterHotkey(".","<Repeat>","TTOTAL_CMD")
 	RegisterHotkey("<lwin>e","<ToggleTC>")
 	RegisterHotkey("<lwin>w","<ToggleVIM>")
-	;RegisterHotkey("<lwin>f","<ToggleFIREFOX>")
+	RegisterHotkey("<lwin>f","<ToggleFIREFOX>")
 	SetHotkey("esc","<Normal_Mode_TC>","TTOTAL_CMD")
 	;; 默认按键完
 	ReadNewFile()
@@ -195,13 +195,29 @@ return
 return
 
 <ToggleVIM>:
-    togglewindow("Vim","e:\vim\exVim\vim74\gvim.exe")
+    togglewindow("Vim","E:\vim\exVim\vim74\gvim.exe")
 return
 
 <ToggleFIREFOX>:
-    togglewindow("MozillaWindowClass","C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
+    toggleexe("firefox.exe","C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
 return
 
+toggleexe(EXE,PATH)
+{
+	IfWinExist,AHK_EXE %EXE%	
+		WinActivate,AHK_EXE %EXE%
+	Else
+		Run,%PATH%
+	Loop,4
+	{
+		IfWinNotActive,AHK_EXE %EXE%
+			WinActivate,AHK_EXE %EXE%
+		Else
+			Break
+		Sleep,500
+	}
+	EmptyMem()
+}
 togglewindow(CLASS,PATH)
 {
 	IfWinExist,AHK_CLASS %CLASS%	
