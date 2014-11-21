@@ -1,7 +1,7 @@
 ﻿<TConly>:
 ;=======================================================
 	Global TCPath
-	TCPath := "E:\soft\Total_Commander_v8.5\TOTALCMD.EXE"
+	TCPath := "E:\dev\totalcmd\TOTALCMD.EXE"
 	If RegExMatch(TcPath,"i)totalcmd64\.exe$")
 	{
 		Global TCListBox := "LCLListBox"
@@ -201,7 +201,7 @@ return
 return
 
 <ToggleVIM>:
-    togglewindow("Vim","E:\vim\exVim\vim74\gvim.exe")
+    togglewindow("Vim","E:\dev\exVim\vim74\gvim.exe")
 return
 
 <ToggleFIREFOX>:
