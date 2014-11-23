@@ -41,6 +41,7 @@
 	;;默认按键(VIM)
 	RegisterHotkey("J","<Down>","TQUICKSEARCH")
 	RegisterHotkey("K","<Up>","TQUICKSEARCH")
+	RegisterHotkey("<enter>","<Esc>","TQUICKSEARCH")
 	RegisterHotkey("0","<0>","TTOTAL_CMD")
 	RegisterHotkey("1","<1>","TTOTAL_CMD")
 	RegisterHotkey("2","<2>","TTOTAL_CMD")

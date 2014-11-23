@@ -52,6 +52,9 @@ return
 <Up>:
 	Send,{Up}
 return
+<Esc>:
+	Send,{Esc}
+return
 <Insert_Mode>:
 	WinGetClass,Class,A
 		Vim_HotKeyTemp[Class] := ""
