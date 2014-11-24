@@ -10,11 +10,11 @@
 	;RegisterHotkey("fd","<MoveDirectoryHotlist>","TTOTAL_CMD")
 	;RegisterHotkey("fb","<CopyDirectoryHotlist>","TTOTAL_CMD")
 	;复制/移动到右侧 f取file的意思 filecopy
-	RegisterHotkey("fc","<cm_CopyOtherpanel>","TTOTAL_CMD")
-	RegisterHotkey("fx","<cm_MoveOnly>","TTOTAL_CMD")
+	RegisterHotkey("fo","<cm_CopyOtherpanel>","TTOTAL_CMD")
+	RegisterHotkey("fm","<cm_MoveOnly>","TTOTAL_CMD")
 	;ff复制到剪切板 fz剪切到剪切板 fv粘贴
-	RegisterHotkey("ff","<cm_CopyToClipboard>","TTOTAL_CMD")
-	RegisterHotkey("fz","<cm_CutToClipboard>","TTOTAL_CMD")
+	RegisterHotkey("fc","<cm_CopyToClipboard>","TTOTAL_CMD")
+	RegisterHotkey("fx","<cm_CutToClipboard>","TTOTAL_CMD")
 	RegisterHotkey("fv","<cm_PasteFromClipboard>","TTOTAL_CMD")
 	;fb复制到收藏夹某个目录，fd移动到收藏夹的某个目录
 	RegisterHotkey("fb","<CopyDirectoryHotlist>","TTOTAL_CMD")

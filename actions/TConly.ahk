@@ -104,6 +104,7 @@
 	RegisterHotkey(".","<Repeat>","TTOTAL_CMD")
 	RegisterHotkey("G","<LastLine>","TTOTAL_CMD")
 	RegisterHotkey("gg","<GoToLine>","TTOTAL_CMD")
+	RegisterHotkey("gd","<cm_SrcOpenDrives>","TTOTAL_CMD")
 	RegisterHotkey("g1","<cm_SrcActivateTab1>","TTOTAL_CMD")
 	RegisterHotkey("g2","<cm_SrcActivateTab2>","TTOTAL_CMD")
 	RegisterHotkey("g3","<cm_SrcActivateTab3>","TTOTAL_CMD")
