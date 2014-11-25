@@ -218,6 +218,26 @@ return
 
 toggleexe(EXE,PATH)
 {
+    WinGet, id, List, AHK_CLASS MozillaWindowClass
+    Loop %id% 
+    {
+        this_id := id%A_Index%
+        WinGetTitle,this_title,ahk_id %this_id%
+        ; MsgBox %this_title%
+        ifinstring this_title , Pentadactyl
+        {
+            Winactivate,AHK_ID %this_id%
+            Loop,4
+            {
+                IfWinNotActive,AHK_ID %this_id%
+                    WinActivate,AHK_ID %this_id%
+                Else
+                    Break
+                Sleep,500
+            }
+            Return
+        }
+    }
 	IfWinExist,AHK_EXE %EXE%	
 		WinActivate,AHK_EXE %EXE%
 	Else
