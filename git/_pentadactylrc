@@ -1,0 +1,13 @@
+"1.1
+
+loadplugins '\.(js|penta)$'
+group user
+map -count -modes=n,v ; -builtin <count>:
+map -count -modes=n,v <C-h> <count><C-p>
+map -count -modes=n,v <C-l> <count><C-n>
+map -count -modes=n,v J <count><C-d>
+map -count -modes=n,v K <count><C-u>
+map -count -modes=n,v y -builtin <count>Y
+map -count -modes=n,v Y -builtin <count>y
+
+" vim: set ft=pentadactyl:
