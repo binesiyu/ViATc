@@ -263,6 +263,7 @@ EmptyMem()
 {
 	return
 }
+#include Foxit.ahk
 ;===================================================
 #include vimcore.0.2.1.ahk
 ;#include Actions\Debug.ahk
